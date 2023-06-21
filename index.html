@@ -3,106 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height,initial-scale=1.0"
+    />
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles/reset.css" />
+
     <title>Admin Dashboard</title>
   </head>
   <body>
-    <main>
-      <header>
-        <div class="row1">
-            <span><img src="/icons/search-sharp.svg" alt="search"> <input type="search" name="search" id="search"></span>
-        </div>
-
-        <div class="row2">Howdy</div>
-      </header>
+    <div class="main">
       <div class="sidebar">
-        <p> Dashboard</p>
+        <div>
+          <img src="/icons/View-dashboard.svg" alt="Dashboard" /> Dashboard
+        </div>
         <div class="links">
+          <a href="#"><img src="/icons/home-sharp.svg" alt="Home" /> Home</a>
           <a href="#"
-            ><span><img src="/icons/home-sharp.svg" alt="Home" /> Home</span></a
+            >
+            <img src="/icons/person-circle-sharp.svg" alt="Profile" />
+            Profile</a
           >
           <a href="#"
-            ><span>
-              <img src="/icons/person-circle-sharp.svg" alt="Profile" />
-              Profile</span
-            ></a
+            >
+            <img
+              src="/icons/chatbubble-ellipses-sharp.svg"
+              alt="Message"
+            />Message</a
           >
           <a href="#"
-            ><span>
-              <img
-                src="/icons/chatbubble-ellipses-sharp.svg"
-                alt="Message"
-              />Message</span
-            ></a
+            > <img src="/icons/time-sharp.svg" alt="History" />History</a
           >
           <a href="#"
-            ><span>
-              <img src="/icons/time-sharp.svg" alt="History" />History</span
-            ></a
+            > <img src="/icons/list-circle-sharp.svg" alt="Tasks" />Tasks</a
           >
           <a href="#"
-            ><span>
-              <img src="/icons/list-circle-sharp.svg" alt="Tasks" />Tasks</span
-            ></a
+            >
+            <img
+              src="/icons/people-circle-sharp.svg"
+              alt="Communities"
+            />Communities</a
           >
-          <a href="#"
-            ><span>
-              <img
-                src="/icons/people-circle-sharp.svg"
-                alt="Communities"
-              />Communities</span
-            ></a
+          <br />
+          <a href="#"><img src="/icons/settings-sharp.svg" /> Settings</a>
+          <a href="#">
+            <img src="/icons/call-sharp.svg" alt="Support" /> Support</a
           >
-                <br>
-          <a href="#"
-            ><span><img src="/icons/settings-sharp.svg" /> Settings</span></a
-          >
-          <a href="#"
-            ><span
-              ><img src="/icons/call-sharp.svg" alt="Support" /> Support</span
-            ></a
-          >
-          <a href="#"
-            ><span
-              ><img src="/icons/shield-checkmark-sharp.svg" alt="Privacy" />
-              Privacy</span
-            ></a
+          <a href="#">
+            <img src="/icons/shield-checkmark-sharp.svg" alt="Privacy" />
+            Privacy</a
           >
         </div>
       </div>
+      <header>
+        <div class="row1">
+          <div class="left">
+            <span
+              ><img src="/icons/search-sharp.svg" alt="search" />
+              <input type="text" name="search" id="search"
+            /></span>
+          </div>
+          <div class="right">
+            <img src="/icons/bell-ring.svg" alt="bell-ring" />
+            <img src="icons/user-profile.svg" alt="" />
+            <em> Abel Goshime</em>
+          </div>
+        </div>
 
-      <div class="main">
-        <p>Projects</p>
+        <div class="row2">
+          <div class="left">
+            <img src="icons/user-profile.svg" alt="" />
 
-        <div class="card">
-          <p>Card 1</p>
-        </div>
-        <div class="card">
-          <p>Card 2</p>
-        </div>
-        <div class="card">
-          <p>Card 3</p>
-        </div>
-        <!-- <div class="card">
-            <p>Card 4</p>
-        </div>
-        <div class="card">
-            <p>Card 5</p>
-        </div>
-        <div class="card">
-            <p>Card 6</p>
-        </div> -->
+            <em> Abel Goshime</em>
+          </div>
 
+          <div class="right">
+            <div class="container">
+              <button>New</button>
+
+              <button>Upload</button>
+
+              <button>Share</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="middlebar">
+        <div class="heading">
+          <h2>My Projects</h2>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <p>Project 1</p>
+            <p>Project Details</p>
+          </div>
+          <div class="card">
+            <p>Project 2</p>
+            <p>Project Details</p>
+          </div>
+          <div class="card">
+            <p>Project 3</p>
+            <p>Project Details</p>
+          </div>
+          <div class="card">
+            <p>Project 4</p>
+            <p>Project Details</p>
+          </div>
+          <div class="card">
+            <p>Project 5</p>
+            <p>Project Details</p>
+          </div>
+          <div class="card">
+            <p>Project 6</p>
+            <p>Project Details</p>
+          </div>
+        </div>
+      </div>
+      <div class="rightbar">
+        <div class="heading">
+          <h2>Announcements</h2>
+        </div>
         <div class="Announcements">
-           <p>Announcements</p>
+          <div class="card">
+            <h4>Site Maintenance</h4>
+            <p>We are finally up and running !!</p>
+            <hr />
+
+            <h4>Community Share Day</h4>
+            <p>Check back later!!</p>
+            <hr />
+            <h4>Updated Privacy Policy</h4>
+            <p>HeroBrine has been removed from the game.</p>
+          </div>
         </div>
 
         <div class="Trending">
-            <p>Trending</p>
+          <div class="heading">
+            <h4>Trending</h4>
+          </div>
+          <div class="trendCont">
+            <div class="card">
+              <img src="icons/user-profile.svg" alt="" />
+              Person 1
+            </div>
+            <br />
+            <div class="card">
+              <img src="icons/user-profile.svg" alt="" />
+              Person 2
+            </div>
+            <br />
+            <div class="card">
+              <img src="icons/user-profile.svg" alt="" />
+              Person 3
+            </div>
+            <br />
+            <div class="card">
+              <img src="icons/user-profile.svg" alt="" />
+              Person 4
+            </div>
+          </div>
         </div>
       </div>
-    </main>
+    </div>
   </body>
 </html>

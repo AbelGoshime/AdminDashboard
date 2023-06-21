@@ -3,6 +3,8 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: #011638;
+  color: #5b9279;
 }
 body a {
   text-decoration: none;
@@ -10,47 +12,32 @@ body a {
 }
 body img {
   width: 2rem;
-  height: 1.5rem;
+  height: 2rem;
 }
 
 #search {
-  width: 20rem;
+  width: 55rem;
   height: 2rem;
   border-radius: 25px;
   border: none;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+.main {
   height: 100%;
-  grid-template-areas: "Sidebar Header" "Sidebar Main" "Sidebar Main";
-}
-
-header {
-  background-color: rgb(177, 62, 62);
-  grid-area: Header;
   display: grid;
-  grid-template-areas: "row1" "row2";
-  gap: 1rem;
-}
-header .row1 {
-  margin-left: 1rem;
-  grid-area: row1;
-}
-header .row2 {
-  margin-left: 1rem;
-  grid-area: row2;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto;
 }
 
 .sidebar {
-  background-color: rgb(49, 212, 212);
   font-size: 2rem;
-  grid-row: 1/4;
-  grid-area: Sidebar;
+  grid-row: 1/5;
+  grid-column: 1;
+  gap: 1rem;
+  box-shadow: 2px 2px 4px #8b687f;
 }
-.sidebar p {
-  margin-left: 1rem;
+.sidebar div {
+  margin: 1rem;
 }
 .sidebar .links {
   margin-left: 1rem;
@@ -59,37 +46,129 @@ header .row2 {
   grid-template-rows: repeat(auto-fit, 1fr);
 }
 
-.main {
-  grid-area: Main;
-  display: grid;
-  grid-template-areas: "Main Main" "Card Card Announcements" "Card Card Trending";
-  background-color: rgb(47, 167, 63);
-  gap: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+header {
+  grid-row: 1/3;
+  grid-column: span 2;
+  border: 2px solid #d4d2d5;
+  box-shadow: 2px 2px 4px #8b687f;
 }
-.main p {
-  color: black;
+header .row1 {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 2rem;
+}
+header .row1 .left {
+  justify-content: space-around;
+  grid-column: 1;
+}
+header .row1 .left img {
+  width: 2rem;
+  height: 1rem;
+}
+header .row1 .right {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+header .row2 {
+  font-size: 24px;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header .row2 .left {
+  grid-column: 1;
+}
+header .row2 .left img {
+  width: 4rem;
+  height: 4rem;
+}
+header .row2 .right {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+header .row2 .right .container button {
+  background-color: #d4d2d5;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.middlebar {
+  font-size: 2rem;
+  grid-row: 3/5;
+  grid-column: 2;
+  gap: 1rem;
+  box-shadow: 2px 2px 4px #8b687f;
+}
+.middlebar .cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.middlebar .card {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+  background-color: #d4d2d5;
+  text-align: center;
+  height: 14rem;
+  width: 18rem;
+  border-radius: 25px;
+}
+.middlebar .card p {
+  margin-top: 1rem;
   font-weight: normal;
-  font-size: 1.5rem;
+  font-size: 14px;
   padding: 5px;
 }
-.main .card {
+
+.rightbar {
+  font-size: 2rem;
+  grid-column: 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.rightbar .heading {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+.rightbar .Announcements {
+  grid-row: 3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.rightbar .Announcements .card {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   margin: 2rem;
-  background-color: #ffffff;
-  color: black;
+  padding: 0.5rem;
+  background-color: #d4d2d5;
   text-align: center;
-  height: 12rem;
-  width: 18rem;
+  height: 25rem;
+  border-radius: 25px;
 }
-.main .Announcements {
-  background-color: rgb(253, 130, 130);
-  grid-area: Announcements;
-  grid-column: -2;
-  grid-row: 1;
+.rightbar .Trending {
+  margin-top: 2rem;
+  grid-row: 4;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
-.main .Trending {
-  background-color: rgb(116, 37, 37);
-  grid-column: -2;
-  grid-row: 2;
+.rightbar .Trending .card {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #d4d2d5;
+  text-align: center;
+  height: 5rem;
+  width: 16rem;
+  border-radius: 25px;
+}
+.rightbar .Trending .trendCont {
+  margin-left: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-row: 2/3;
 }/*# sourceMappingURL=style.css.map */
